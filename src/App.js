@@ -19,6 +19,16 @@ function App() {
     );
   });
 
+  //Search component
+
+  const Search = () => {
+    return <div className="search-bar">
+              <input type="search" className="search-input" placeholder="Enter a pokemon name"></input>
+            </div>
+  };
+
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -26,11 +36,10 @@ function App() {
       </header>
       <body>
         <div className="PokemonListPage">
-        <div className="search-bar">
-          <input type="search" className="search-input" placeholder="Enter a pokemon name"></input>
-        </div>
+        <Search />
         <div className="CardList">{pok}</div>
         </div>
+        
       </body>
     </div>
   );
