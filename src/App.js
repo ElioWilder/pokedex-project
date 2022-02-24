@@ -1,43 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import pokemons from './pokemons.json';
+import Header from './Component/Header/header.js';
+import Search from './Component/Search/search.js';
+import CardList from './Component/CardList/cardList.js';
 
 function App() {
-
-  //Pokemon Card Loop
-  const pok = [];
-
-  pokemons.forEach((element) => {
-    pok.push(
-
-      <div className="Card">
-        <p>No.{element.id}</p>
-        <h3>{element.names["fr"]}</h3>
-        <img src={element.image} className="Pokemon" alt="pokemon" />
-        <p className="Type">{element.types}</p>
-      </div>
-    );
-  });
-
-  //Search component
-
-  const Search = () => {
-    return <div className="search-bar">
-              <input type="search" className="search-input" placeholder="Enter a pokemon name"></input>
-            </div>
-  };
-
-
-
-  return (
+  
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <Header />
       <body>
         <div className="PokemonListPage">
         <Search />
-        <div className="CardList">{pok}</div>
+        <CardList />
         </div>
         
       </body>
