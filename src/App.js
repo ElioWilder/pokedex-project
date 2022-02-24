@@ -23,12 +23,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+      </header>
+      <body>
+        <div className="PokemonListPage">
         <div className="search-bar">
           <input type="search" className="search-input" placeholder="Enter a pokemon name"></input>
         </div>
-      </header>
-      <body>
         <div className="CardList">{pok}</div>
+        </div>
       </body>
     </div>
   );
