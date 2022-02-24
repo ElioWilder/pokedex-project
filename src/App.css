@@ -1,3 +1,4 @@
+/*Header logo style*/
 .App-logo {
   max-width: 150px;
   max-height: 200px;
@@ -7,20 +8,40 @@
   background-color: #000000;
 }
 
+/*Hearder menu toggle style*/
+
+
+
+/*Hearder search bar style*/
+
 .Langage-selection {
-  display: inline-block;
+  display: flex;
   background-color: cadetblue;
 }
+
+.search-bar {
+  background-color: #000000;
+}
+
+.search-input {
+  font-size: large;
+  margin: 10px;
+  width: 105em;
+}
+
+/*Pokemon Card List style*/
 
 .CardList {
   border: solid;
   display: flex;
   flex-wrap: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: #000000;
 }
 
 .Card {
   background-color: white;
   border: solid;
+  margin: 0;
+  padding: 20px;
 }

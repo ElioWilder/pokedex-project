@@ -3,23 +3,32 @@ import './App.css';
 import pokemons from './pokemons.json';
 
 function App() {
+
+  //Pokemon Card Loop
+  const pok = [];
+
+  pokemons.forEach((element) => {
+    pok.push(
+
+      <div className="Card">
+        <p>No.{element.id}</p>
+        <h3>{element.names["fr"]}</h3>
+        <img src={element.image} className="Pokemon" alt="pokemon" />
+        <p className="Type">{element.types}</p>
+      </div>
+    );
+  });
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <button className="Langage-selection">LangageSelection</button>
+        <div className="search-bar">
+          <input type="search" className="search-input" placeholder="Enter a pokemon name"></input>
+        </div>
       </header>
       <body>
-        <div className="CardList">
-          <div className="Card">
-            <img src="" className="Pokemon" alt="pokemon"/>
-            <p className="Type"></p>
-          </div>
-          <div className="Card">
-            <img src="" className="Pokemon" alt="pokemon"/>
-            <p className="Type"></p>
-          </div>
-        </div>
+        <div className="CardList">{pok}</div>
       </body>
     </div>
   );
