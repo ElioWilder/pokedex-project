@@ -1,9 +1,10 @@
 import logo from './logo.svg';
+import Box from '@mui/material/Box';
 
 const Header = () => {
-    return <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-            </header>
+    return <Box sx={{width: 40, height: 200}}>
+                <img src={logo} alt="logo" />
+            </Box>
 };
 
 export default Header;
